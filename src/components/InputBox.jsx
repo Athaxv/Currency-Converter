@@ -2,11 +2,11 @@ import React, { useId } from 'react'
 
 function InputBox({
     label,
-    amount,
+    Amount,
     onAmountChange,
     onCurrencyChange,
     currencyOptions = [],
-    selectCurrency = "usd",
+    selectCurrency = "USD",
     amountDisable = false,
     currencyDisable = false,
     className = "",
@@ -25,7 +25,7 @@ function InputBox({
             className='outline-none w-full bg-transparent py-1.5'
             placeholder='Amount'
             disabled={amountDisable}
-            value={amount}
+            value={Amount}
             onChange={e => onAmountChange && onAmountChange(Number(e.target.value))}
             />
         </div>
@@ -34,7 +34,7 @@ function InputBox({
         Currency Type
         </p>
         <select 
-        className='rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none' 
+        className='rounded-lg   py-1 bg-gray-100 cursor-pointer outline-none' 
         value={selectCurrency}
         onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
         disabled={currencyDisable}
